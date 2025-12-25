@@ -31,6 +31,10 @@
 ## 4. Запуск
 
 ```bash
+# Создать .env из примера
+cp .env.example .env
+# Заполнить TELEGRAM_TOKEN и TELEGRAM_CHAT_ID
+
 # Инициализация
 docker-compose up airflow-init
 
