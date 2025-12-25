@@ -10,21 +10,8 @@
 - Интеграция уведомлений через Telegram Bot API
 - Конфигурация через переменные окружения
 
-## 2. Структура проекта
 
-```
-mlops_hw5_Martirosova_Anastasia/
-├── dags/
-│   └── ml_retrain_pipeline.py
-├── screenshots/
-├── docker-compose.yml
-├── Dockerfile
-├── requirements.txt
-├── .env
-└── README.md
-```
-
-## 3. Архитектура DAG
+## 2. Архитектура DAG
 
 **Последовательность выполнения:**
 1. `train_model` — обучение модели
@@ -33,7 +20,7 @@ mlops_hw5_Martirosova_Anastasia/
    - accuracy >= 0.8 → `deploy_model` → `notify_success`
    - accuracy < 0.8 → `skip_deploy`
 
-## 4. Переменные окружения
+## 3. Переменные окружения
 
 | Переменная | Описание |
 |------------|----------|
@@ -41,7 +28,7 @@ mlops_hw5_Martirosova_Anastasia/
 | `TELEGRAM_CHAT_ID` | ID чата для уведомлений |
 | `MODEL_VERSION` | Версия модели (default: v1.0.0) |
 
-## 5. Запуск
+## 4. Запуск
 
 ```bash
 # Инициализация
@@ -54,7 +41,7 @@ docker-compose up -d
 **Доступ к сервисам:**
 - Airflow UI: http://localhost:8080 (airflow/airflow)
 
-## 7. Скриншоты
+## 5. Скриншоты
 
 | Скриншот | Описание |
 |----------|----------|
